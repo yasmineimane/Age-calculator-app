@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,700;1,800&display=swap');
+
+:root {
+    /* COLORS */
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 1%, 83%);
+    --Smokey-grey: hsl(0, 0%, 52%);
+    --Off-black: hsl(0, 0%, 8%);
+    /* FONTS */
+    --Font-size-input: 32px;
+    --Font-Family: 'Poppins', sans-serif;
+    --Font-weight-nrml: 400;
+    --Font-weight-bold: 700;
+    --Font-weight-extra-bold: 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Off-white);
+    font-family: var(--Font-Family);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 500px;
+    max-width: 80%;
+    padding: 30px;
+    background-color: var(--White);
+    border-radius: 10px;
+    border-bottom-right-radius: 150px;
+    position: relative;
+}
+
+input {
+    width: 100px;
+    height: 40px;
+    padding: 10px;   
+    border-radius: 5px;
+    border: 1px solid var(--Off-white);
+    outline: none;
+    cursor: pointer;
+}
+
+input:focus {
+    border: 2px solid var(--Purple);
+}
+
+small {
+    color: var(--Light-red);
+    font-weight: var(--Font-weight-bold);
+    font-size: 0.6rem;
+    text-transform: capitalize;
+}
+
+.submit-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--Purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    top: 95px;
+    cursor: pointer;
+}
+.submit-btn:hover {
+    background-color: var(--Off-black);
+}
+
+::placeholder {
+    font-weight: var(--Font-weight-bold);
+    font-size: 20px;
+    color: var(--Smokey-grey);
+    padding-left: 10px;
+}
+
+.inputs {
+    display: flex;
+    border-bottom: 2px solid var(--Off-white);
+    margin-bottom: 20px;
+}
+.days, .months, .years {
+    display: grid;
+    margin-bottom: 40px;
+}
+
+.months, .years {
+    margin-left: 20px;
+}
+
+label {
+    font-weight: var(--Font-weight-bold);
+    font-size: 9px;
+    margin-bottom: 5px;
+    color: var(--Smokey-grey);
+}
+
+.output span {
+    font-size: 2.80rem;
+    color: var(--Purple);
+}
+
+h1 {
+    font-weight: var(--Font-weight-extra-bold);
+    font-size: 50px;
+}
+
+@media(max-width:768px) {
+    input {
+        width: 80%;
+    }
+    ::placeholder{
+        font-size: 15px;
+    }
+    .output span {
+        font-size: 1.75rem;
+    }
+    .submit-btn {
+        width: 40PX;
+        height: 40px;
+        right: 176px;
+        top: 110px;
+    }
+    .submit-btn img {
+        transform: scale(0.5);
+    }
+}
+
+
+
+
